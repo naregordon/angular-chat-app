@@ -1,0 +1,47 @@
+$gray-bg: #ccc;
+$blue-bg: #337ab7;
+$white-txt: #fff;
+
+body {
+	background: $gray-bg;
+
+	.navbar {
+		background: $blue-bg;
+		border: none;
+    	border-radius: 0;
+
+		&-brand {
+			color: $white-txt;
+		}
+	}
+
+	.main {
+
+		.chatbox {
+			position: relative;
+			border: none;
+
+			&.chat-active {
+				height: 300px;
+				transition-duration: 0.5s;
+			}
+
+			.panel-heading {
+				color: $white-txt;
+				background: $blue-bg;
+			}
+
+			.messages {
+				height: 195px;
+    			overflow: auto;
+			}
+
+			.msg-form {
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				padding: 10px;
+			}
+		}
+	}
+}

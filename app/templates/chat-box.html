@@ -1,0 +1,41 @@
+<div class="panel panel-default chatbox" ng-class="{'chat-active': chatMode && !loginMode}">
+  <div class="panel-heading">
+    <h3 class="panel-title">Chat box
+		<span ng-show="user.name.length > 0" class="pull-right label label-success">Connected as {{user.name}}</span>
+    </h3>
+  </div>
+  <div class="panel-body">
+
+    <form class="user-name input-group" ng-submit="launchChat(name)" ng-hide="chatMode || loginMode">
+    	<p>What is your name ?</p>
+	    <div class="input-group">
+	      <input type="text" class="form-control" placeholder="Your name" ng-model="name">
+	      <span class="input-group-btn">
+	        <button class="btn btn-default" type="submit">Ok</button>
+	      </span>
+	    </div>
+    </form>
+
+	<div ng-show="chatMode && !loginMode">
+		<div class="messages" scroll-bottom="messages">
+			<div ng-repeat="message in messages track by $index">
+				<strong>{{message.name}} : </strong>{{message.message}}
+			</div>
+		</div>
+	    <form class="input-group msg-form" ng-submit="postMessage()">
+	      <input type="text" class="form-control" placeholder="Your message..." ng-model="user.message">
+	      <span class="input-group-btn">
+	        <button class="btn btn-default" type="submit">Post</button>
+	      </span>
+	    </form>
+	</div>
+
+	<div ng-show="loginMode">
+		<p>Who do you want to login as ?</p>
+		<div>
+			<button class="btn btn-default col-sm-6" ng-repeat="user in users track by $index" ng-click="logBackIn($index)" ng-show="!user.connected">{{user.name}}</button>
+		</div>
+	</div>
+
+  </div>
+</div>

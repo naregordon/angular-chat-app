@@ -1,0 +1,27 @@
+body {
+  background: #ccc; }
+  body .navbar {
+    background: #337ab7;
+    border: none;
+    border-radius: 0; }
+    body .navbar-brand {
+      color: #fff; }
+  body .main .chatbox {
+    position: relative;
+    border: none; }
+    body .main .chatbox.chat-active {
+      height: 300px;
+      transition-duration: 0.5s; }
+    body .main .chatbox .panel-heading {
+      color: #fff;
+      background: #337ab7; }
+    body .main .chatbox .messages {
+      height: 195px;
+      overflow: auto; }
+    body .main .chatbox .msg-form {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      padding: 10px; }
+
+/*# sourceMappingURL=app.css.map */
