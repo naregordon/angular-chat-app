@@ -18,8 +18,10 @@
 
 	<div ng-show="chatMode && !loginMode">
 		<div class="messages" scroll-bottom="messages">
-			<div ng-repeat="message in messages track by $index">
-				<strong>{{message.name}} : </strong>{{message.message}}
+			<div ng-repeat="message in messages track by $index" class="message" ng-class="{'sendermsg' : message.name == user.name}" >
+				<div class="bubble-msg">
+					<strong>{{message.name}} : </strong>{{message.message}}
+				</div>
 			</div>
 		</div>
 	    <form class="input-group msg-form" ng-submit="postMessage()">

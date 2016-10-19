@@ -1,4 +1,5 @@
 $gray-bg: #ccc;
+$lightgray: #e9ebee;
 $blue-bg: #337ab7;
 $white-txt: #fff;
 
@@ -26,14 +27,45 @@ body {
 				transition-duration: 0.5s;
 			}
 
+			.panel-body {
+				padding-top: 0;
+			}
+
 			.panel-heading {
 				color: $white-txt;
 				background: $blue-bg;
 			}
 
 			.messages {
-				height: 195px;
+				height: 218px;
     			overflow: auto;
+
+    			.message {
+
+    				&.sendermsg {
+    					text-align: right;
+
+    					.bubble-msg {
+    						background: $blue-bg;
+    						color: $white-txt;
+    						border-bottom-right-radius: 0;
+    						border-bottom-left-radius: 15px;
+    					}
+
+    					strong {
+    						display: none;
+    					}
+    				}
+
+    				.bubble-msg {
+    					background: $lightgray;
+    					display: inline-block;
+					    margin: 3px 0;
+					    padding: 5px 20px;
+					    border-radius: 15px;
+					    border-bottom-left-radius: 0;
+    				}
+    			}
 			}
 
 			.msg-form {

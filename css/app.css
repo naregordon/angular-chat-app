@@ -12,12 +12,30 @@ body {
     body .main .chatbox.chat-active {
       height: 300px;
       transition-duration: 0.5s; }
+    body .main .chatbox .panel-body {
+      padding-top: 0; }
     body .main .chatbox .panel-heading {
       color: #fff;
       background: #337ab7; }
     body .main .chatbox .messages {
-      height: 195px;
+      height: 218px;
       overflow: auto; }
+      body .main .chatbox .messages .message.sendermsg {
+        text-align: right; }
+        body .main .chatbox .messages .message.sendermsg .bubble-msg {
+          background: #337ab7;
+          color: #fff;
+          border-bottom-right-radius: 0;
+          border-bottom-left-radius: 15px; }
+        body .main .chatbox .messages .message.sendermsg strong {
+          display: none; }
+      body .main .chatbox .messages .message .bubble-msg {
+        background: #e9ebee;
+        display: inline-block;
+        margin: 3px 0;
+        padding: 5px 20px;
+        border-radius: 15px;
+        border-bottom-left-radius: 0; }
     body .main .chatbox .msg-form {
       position: absolute;
       bottom: 0;
