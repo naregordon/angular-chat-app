@@ -38,6 +38,11 @@ App.controller('ChatCtrl', ['$scope', 'MessagesService', 'UsersService', ($scope
 		UsersService.updateLoginStatus(index,true);
 	}
 
+  $scope.newUser = () => {
+    $scope.loginMode = false;
+    $scope.chatMode = false;
+  }
+
 	$scope.$watch('users', () => {
 		if($scope.users.length > 0) {
 			$scope.chatMode = true;

@@ -79,6 +79,13 @@ body {
 				left: 0;
 				padding: 10px;
 			}
+
+			.login-mode {
+				button {
+					margin: 3px 5px;
+					width: calc(50% - 10px);
+				}
+			}
 		}
 	}
 }

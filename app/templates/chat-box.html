@@ -32,10 +32,11 @@
 	    </form>
 	</div>
 
-	<div ng-show="loginMode">
+	<div ng-show="loginMode" class="login-mode">
 		<p>Who do you want to login as ?</p>
 		<div>
-			<button class="btn btn-default col-sm-6" ng-repeat="user in users track by $index" ng-click="logBackIn($index)" ng-show="!user.connected">{{user.name}}</button>
+			<button class="btn btn-default" ng-repeat="user in users track by $index" ng-click="logBackIn($index)" ng-show="!user.connected">{{user.name}}</button>
+			<button class="btn btn-default" ng-click="newUser()"><span class="glyphicon glyphicon-plus"></span><strong> New User</strong></button>
 		</div>
 	</div>
 

@@ -19,7 +19,7 @@
 
         <div class="main container" ng-controller="MainCtrl">
 
-            <div class="row">
+            <div class="row chatboxes">
                 <div class="col-sm-6">
                     <chat-box></chat-box>
                 </div>
@@ -27,7 +27,8 @@
                     <chat-box></chat-box>
                 </div>
             </div>
-
+            
+            <button class="btn btn-success" ng-click="addChatBox()">Add User</button>
             <button class="btn btn-danger" ng-click="rebootApp()">Reboot app</button>
             
         </div>
